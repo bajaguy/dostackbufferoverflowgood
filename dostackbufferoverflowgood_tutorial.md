@@ -8,7 +8,7 @@ toc: true
 ---
 
 \begin{center}
-  Last updated 2018-02-23
+  Last updated 2019-01-21
 
   \url{https://github.com/justinsteven/dostackbufferoverflowgood}
 \end{center}
@@ -323,7 +323,7 @@ Spoilers:
 
 ---
 
-A `CALL` is used when one functions wants to invoke another function (or itself
+A `CALL` is used when one function wants to invoke another function (or itself
 in the case of recursive code) with the intention of having that `CALL`ed
 function `RET`urn to the next line of code in the calling function.
 
@@ -1751,7 +1751,7 @@ Evasion options for payload/windows/exec:
 The options we will provide to `msfvenom` are:
 
 * `-p windows/exec` (we want Windows shellcode that will `exec`ute a command)
-* `-b '\x00\x0A` (the list of bad characters we determined earlier, so that `msfvenom` can avoid having them in the generated shellcode)
+* `-b '\x00\x0A'` (the list of bad characters we determined earlier, so that `msfvenom` can avoid having them in the generated shellcode)
 * `-f python` (output shellcode in a Python-friendly format)
 * `--var-name shellcode_calc` (tell `msfvenom` to output Python code that sets a variable called `shellcode_calc`)
 * `CMD=calc.exe EXITFUNC=thread` (options for the `windows/exec` payload)
